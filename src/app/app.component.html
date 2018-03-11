@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<main>
+    <h1>{{title}}</h1>
+    <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input [(ngModel)] = "newItem" (keyup.enter)="addItem()" type="text" class="form-control" placeholder="Add item...">
+    </div>
+  </div>
+</div>
+          <table class="table table-hover">
+<thead>
+    <tr>
+        <th scope="col">To Do</th>
+        <th scope="col">Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor= "let i of items; let ind = index">
+        <td>{{i}}</td>
+        <td><i (click)= 'removeItem(index)' class="fa fa-trash icon-color" aria-hidden="true"></i></td>
+    </tr>
+</tbody>
+</table>
+</main>
+
